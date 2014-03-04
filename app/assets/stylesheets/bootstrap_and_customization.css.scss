@@ -3,6 +3,14 @@ $navbar-default-bg:	#2c3e50;
 $navbar-height:	45px;
 $navbar-default-link-color:	#ecf0f1;
 $navbar-default-link-hover-bg:	#3498db;
-$brand-primary: #c0392b;
+$brand-primary: #3498db;
 
 @import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
