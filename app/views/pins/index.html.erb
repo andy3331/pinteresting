@@ -1,27 +1,44 @@
-<h1>Listing pins</h1>
+<% if user_signed_in? %>
+<div class='panel panel-default'>
+  <div class="panel-heading">
+      <div class="panel-title">
+        <h1>Listing pins</h1>
+      </div>
+  </div>
+        <div class="panel-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @pins.each do |pin| %>
-        <tr>
-          <td><%= pin.description %></td>
-          <td><%= link_to 'Show', pin %></td>
-          <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Pin', new_pin_path %>
+            <tbody>
+              <% @pins.each do |pin| %>
+                <tr>
+                  <td><%= pin.description %></td>
+                  <td><%= link_to 'Show', pin %></td>
+                  <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+                  <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <br>
+              <p>
+                <%= link_to 'New Pin', new_pin_path, class: 'btn btn-primary btn-lg' %>
+              </p>
+        </div>
+</div>
+    <% else %>
+      <div class="jumbotron center">
+        <h2>Sign in to create a new pin!</h2>
+          <p>
+          <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+          </p>
+        <% end %> 
+      </div>

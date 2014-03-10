@@ -1,14 +1,9 @@
 <div class="jumbotron left">
 	<% if user_signed_in? %>
 	<h1> Pins Section </h1>
-	<div class="btn-group btn group-justified">
-		<div class="btn group">
 			<p>	
-				<%= link_to "Pins", pins_path, class: "btn btn-primary btn-lg navbar-left" %>
+				<%= link_to "Pins", pins_path, class: "btn btn-primary btn-lg" %>
 			</p>
-		</div>
-	</div
-</div>
 <% else %>
 		<h1>Welcome to my App.</h1>
 		<p>
