@@ -5,6 +5,8 @@ ruby '2.0.0'
 gem 'devise'
 gem 'paperclip', '~>3.0'
 gem 'aws-sdk', '~> 1.20.0'
+gem 'masonry-rails', '~> 0.2.0'
+gem 'jquery-turbolinks'
 
 gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
