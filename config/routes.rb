@@ -3,7 +3,8 @@ Pinteresting::Application.routes.draw do
 
   devise_for :users
   # get "pages/home"
-  root "pins#index" #changes to pins index change back to pages#home for home page
+  root "pins#index" #home page is now the index and the "home" page is displayed when not signed in.
+  #changeto to pages#home for home page and rename _home.html.erb as home.html.erb
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
